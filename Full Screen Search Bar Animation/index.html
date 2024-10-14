@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--==================== METADATOS ====================-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Searches">
+  <meta name="keywords" content="HTML-CSS-JS">
+  <meta name="author" content="Rocio Cuello">
+
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--==================== TITULO ====================-->
+  <title>Searches | Full Screen Search Bar Animation</title>
+
+  <!--==================== ICONO DE PESTAÑA ====================-->
+  <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+
+  <!--==================== ICONO====================-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+  <div class="close-btn">
+    <span class="fas fa-times"></span>
+ </div>
+ <div class="wrapper">
+    <div class="search-btn">
+       <span class="fas fa-search"></span>
+    </div>
+    <div class="search-data">
+       <input type="text" required>
+       <div class="line"></div>
+       <label>Escribe para buscar...</label>
+       <span class="fas fa-search"></span>
+    </div>
+ </div>
+  <!--==================== SCRIPT ====================-->
+  <script>
+    $(".search-btn").click(function(){
+      $(".wrapper").addClass("active");
+      $(this).css("display", "none");
+      $(".search-data").fadeIn(500);
+      $(".close-btn").fadeIn(500);
+      $(".search-data .line").addClass("active");
+      setTimeout(function(){
+        $("input").focus();
+        $(".search-data label").fadeIn(500);
+        $(".search-data span").fadeIn(500);
+      }, 800);
+    });
+    $(".close-btn").click(function(){
+      $(".wrapper").removeClass("active");
+      $(".search-btn").fadeIn(800);
+      $(".search-data").fadeOut(500);
+      $(".close-btn").fadeOut(500);
+      $(".search-data .line").removeClass("active");
+      $("input").val("");
+      $(".search-data label").fadeOut(500);
+      $(".search-data span").fadeOut(500);
+    });
+ </script>
+</body>
+</html>

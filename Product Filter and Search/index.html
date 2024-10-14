@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--==================== METADATOS ====================-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Searches">
+  <meta name="keywords" content="HTML-CSS-JS">
+  <meta name="author" content="Rocio Cuello">
+
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--==================== TITULO ====================-->
+  <title>Searches | Product Filter and Search</title>
+
+  <!--==================== ICONO DE PESTAÑA ====================-->
+  <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+</head>
+<body>
+  <div class="container">
+    <form class="filter">
+        <div class="item">
+            <label for="">Categoría</label>
+            <select name="category">
+                <option value="">---</option>
+                <option value="T-shirt">Camiseta</option>
+                <option value="Shirt">Camisa</option>
+                <option value="Polo">Polo</option>
+            </select>
+        </div>
+        <div class="item">
+            <label for="">Color</label>
+            <select name="color">
+                <option value="">---</option>
+                <option value="white">Blanco</option>
+                <option value="black">Negro</option>
+                <option value="grey">Gris</option>
+                <option value="blue">Azul</option>
+                <option value="brown">Marrón</option>
+            </select>
+        </div>
+        <div class="item">
+            <label for="">Nombre</label>
+            <input type="text" name="name">
+        </div>
+        <div class="item">
+            <label for="">Precio Mínimo</label>
+            <input type="number" name="minPrice">
+        </div>
+        <div class="item">
+            <label for="">Precio Máximo</label>
+            <input type="number" name="maxPrice">
+        </div>
+        <div class="item submit">
+            <button>Buscar</button>
+        </div>
+    </form>
+    <div class="countResults">
+        Se encontraron  <b id="count">5</b> resultados
+    </div>
+    <div id="list">
+        
+    </div>
+  </div>
+  <!--==================== SCRIPT ====================-->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
